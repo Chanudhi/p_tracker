@@ -470,13 +470,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     icon: Icons.mood,
                     label: 'Log Mood',
                     color: Colors.purple.shade400,
-                    onPressed: () => _showMoodDialog(DateTime.now()),
+                    onPressed: () => showMoodDialog(DateTime.now()),
                   ),
                   _buildActionButton(
                     icon: Icons.local_hospital,
                     label: 'Log Symptoms',
                     color: Colors.blue.shade400,
-                    onPressed: () => _showSymptomDialog(DateTime.now()),
+                    onPressed: () => showSymptomDialog(DateTime.now()),
                   ),
                 ],
               ),
@@ -559,7 +559,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return today.difference(cycleData.lastPeriod!).inDays + 1;
   }
 
-  void _showMoodDialog(DateTime date) {
+  void showMoodDialog(DateTime date) {
     final TextEditingController controller = TextEditingController();
     showDialog(
       context: context,
@@ -591,7 +591,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  void _showSymptomDialog(DateTime date) {
+  void showSymptomDialog(DateTime date) {
     final TextEditingController controller = TextEditingController();
     showDialog(
       context: context,
